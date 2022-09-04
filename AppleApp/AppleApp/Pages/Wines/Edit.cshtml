@@ -1,0 +1,66 @@
+﻿@page
+@model AppleApp.Pages.Wines.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Wine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Wine.ID" />
+            <div class="form-group">
+                <label asp-for="Wine.Name" class="control-label"></label>
+                <input asp-for="Wine.Name" class="form-control" />
+                <span asp-validation-for="Wine.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wine.Category" class="control-label"></label>
+                <input asp-for="Wine.Category" class="form-control" />
+                <span asp-validation-for="Wine.Category" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="Wine.Location" class="control-label"></label>
+                <input asp-for="Wine.Location" class="form-control" />
+                <span asp-validation-for="Wine.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wine.Rate" class="control-label"></label>
+                <input asp-for="Wine.Rate" class="form-control" />
+                <span asp-validation-for="Wine.Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wine.Description" class="control-label"></label>
+                <input asp-for="Wine.Description" class="form-control" />
+                <span asp-validation-for="Wine.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wine.ImgUrl" class="control-label"></label>
+                <input asp-for="Wine.ImgUrl" class="form-control" />
+                <span asp-validation-for="Wine.ImgUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wine.AppleID" class="control-label"></label>
+                <select asp-for="Wine.AppleID" class="form-control" asp-items="ViewBag.AppleID"></select>
+                <span asp-validation-for="Wine.AppleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

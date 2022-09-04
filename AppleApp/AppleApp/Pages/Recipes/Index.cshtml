@@ -1,0 +1,46 @@
+﻿@page
+@model AppleApp.Pages.Recipes.IndexModel
+
+<partial name="_Notification" />
+
+@{
+    ViewData["Title"] = "Foods";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Food</h1>
+
+<p>
+    Register or Login to <a asp-page="Create">Create New</a> Food.
+</p>
+
+
+<div class="container text-center">
+        <div class="row">
+            
+                @foreach (var item in Model.Recipe)
+                    {
+                        <div class="col-3" >
+                            <div class="card" style="width: 18rem;">
+                                <img src="@Url.Content(@item.ImgUrl) class="card-img-top" alt="...">
+                               
+                                 <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                                    <p class="card-text">@Html.DisplayFor(modelItem => item.Category)</p>  
+                                      <p class="card-text">@Html.DisplayFor(modelItem => item.Rate)</p> 
+                                    <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                                        <p class="card-text">@Html.DisplayFor(modelItem => item.Apple.Name)</p>
+                                           
+                                       <p><a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                       <a asp-page="./Details" asp-route-id="@item.ID">Read More</a> |
+                                       <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a></p>
+                                  </div>
+
+                            </div>
+                        </div>
+                      
+                    }
+         
+        </div>   
+ </div> 
+

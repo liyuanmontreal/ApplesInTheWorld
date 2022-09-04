@@ -1,0 +1,91 @@
+﻿@page 
+@model AppleApp.Pages.Apples.IndexModel
+
+<partial name="_Notification" />
+
+@{
+    ViewData["Title"] = "Apples";
+}
+
+<h1>Apples</h1>
+
+<p>
+    Register or Login to <a asp-page="Create">Create New</a> Item.
+</p>
+
+<form>
+    <p>
+        Location: <select asp-for="AppleLocation" asp-items="Model.Locations">
+            <option value="">All</option>
+        </select>
+        Name: <input type="text" asp-for="SearchString" />
+
+        <input type="submit" value="Filter" />    
+        
+        
+    </p>    
+</form>
+
+
+<form>
+    <p>
+       
+        Or Sort by:
+        <select   asp-for="AppleSort" >
+            <option value="Most Popular">Most Popular</option>
+            <option value="Best Rated">Best Rated</option>
+            <option value="Alphabetically">Alphabetically</option>
+            <option value="By Location">By Location</option>                    
+        </select>
+
+        <input type="submit" value="Sort" />    
+        
+        
+    </p>    
+</form>
+
+
+
+<br />
+
+
+<div class="container text-center">
+  <div class="row">
+   
+  </div>
+</div>
+
+
+<div class="container text-center">
+        <div class="row">
+            
+                @foreach (var item in Model.Apple)
+                    {
+                        <div class="col-3" >
+                            <div class="card" style="width: 18rem;">
+                                <img src="@Url.Content(@item.ImgUrl) class="card-img-top" alt="..." >
+                               <!--<div class="card-img-overlay">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Rank)</h5>    
+                              </div>-->
+                                 <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Rank) @Html.DisplayFor(modelItem => item.Name)</h5>
+                                       <p class="card-text">@Html.DisplayFor(modelItem => item.Location)</p>   
+                                         <p class="card-text">@Html.DisplayFor(modelItem => item.Rate)</p>   
+                                      <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>                                  
+                                       <p><a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                       <a asp-page="./Details" asp-route-id="@item.ID">Read More</a> |
+                                       <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a></p>
+                                  </div>
+
+                            </div>
+                        </div>
+                      
+                    }
+         
+        </div>   
+ </div>   
+
+
+ 
+
+  

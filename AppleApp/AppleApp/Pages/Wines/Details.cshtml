@@ -1,0 +1,59 @@
+﻿@page
+@model AppleApp.Pages.Wines.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Wine</h4>
+    <hr />
+     <img src="@Url.Content(@Model.Wine.ImgUrl)"/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Category)
+        </dt>
+       
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Category)
+        </dd>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Location)
+        </dt>
+         <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Rate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Rate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Description)
+        </dd>
+     
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wine.Apple)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wine.Apple.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Wine?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

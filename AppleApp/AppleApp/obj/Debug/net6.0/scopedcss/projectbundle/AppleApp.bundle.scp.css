@@ -1,0 +1,107 @@
+/* _content/AppleApp/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-6tolsqsrr6] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-6tolsqsrr6] {
+  color: #0077cc;
+}
+
+.btn-primary[b-6tolsqsrr6] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-6tolsqsrr6], .nav-pills .show > .nav-link[b-6tolsqsrr6] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-6tolsqsrr6] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-6tolsqsrr6] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-6tolsqsrr6] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-6tolsqsrr6] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-6tolsqsrr6] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.top-list-article__intro-title-top[b-6tolsqsrr6] {
+    display: block;
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 400 
+}
+
+.top-list-article__intro-title-top[b-6tolsqsrr6] {
+    line-height: 55px
+}
+.top-list-article__intro-title-middle[b-6tolsqsrr6] {
+    display: block;
+    font-size: 46px;
+    line-height: 55px;
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.top-list-article__intro-title-bottom[b-6tolsqsrr6], .top-list-article__intro-title-top[b-6tolsqsrr6] {
+    display: block;
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 400
+}
+
+.top-list-article__intro-title-top[b-6tolsqsrr6] {
+    line-height: 55px
+}
+
+.top-list-article__intro-title-bottom[b-6tolsqsrr6] {
+    line-height: 51px
+}
+
+.top-list-article__intro-summary[b-6tolsqsrr6] {
+    margin: 50px 25% 40px;
+    color: #828282
+}
+.plate-lines[b-6tolsqsrr6] { 
+    display: block;
+    width: 62px;
+    height: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px
+}
+
+.plate-lines--center[b-6tolsqsrr6] {
+    margin: 20px auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.plate-lines--biggest[b-6tolsqsrr6] {
+    margin-top: 30px; 
+    width:104px;
+    height: 6px
+}
